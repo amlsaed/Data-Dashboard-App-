@@ -1,11 +1,13 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import styles from '@/styles/Home.module.css'
-import Dashboard from './dashboard/dashboard'
-import Login from './login'
+import Head from "next/head";
+import Image from "next/image";
+import { Inter } from "next/font/google";
+import styles from "@/styles/Home.module.css";
+import Dashboard from "./dashboard/dashboard";
+import Login from "./login";
+import Header from "./components/header";
+import Sidemenu from "./components/sidemenu";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
@@ -17,9 +19,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-       <Dashboard/>
-       <Login/>
+        <Header />
+        <Sidemenu />
+        <Dashboard />
+        <Login />
       </main>
     </>
-  )
+  );
 }
